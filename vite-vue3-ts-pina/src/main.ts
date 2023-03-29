@@ -1,13 +1,16 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import store from './store'
 import router from './router'
+import '@/style/common.css'
+import ElementPlus from 'element-plus'
+import print from 'vue3-print-nb'
+
 
 const app = createApp(App)
-
 app.use(store)
 app.use(router)
-
+app.use(ElementPlus)
 app.mount('#app')
+app.use(print)
 

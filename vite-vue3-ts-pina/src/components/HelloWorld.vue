@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ useStore.name? useStore.name :'山里的闲人' }}</h1>
+    <h1>{{ myname }}</h1>
     <input type="text" v-model="person.name" @keydown.enter="setUserName">
   </div>
 </template>
@@ -9,7 +10,9 @@
 import { useUserStore } from '@/store/user';
 import { ref,watch} from 'vue';
 import { useRoute } from 'vue-router';
+import { inject } from "vue";
 
+const myname = inject('name')
 const person= ref({name:''})
 const useStore = useUserStore()
 const setUserName = () =>{

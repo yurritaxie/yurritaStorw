@@ -20,6 +20,56 @@ const routes: Array<RouteRecordRaw> = [
             requireAuth: true
         },
         component: () => import('@/pages/Home/index.vue')
+    },
+    {
+        path: '/threejs',
+        name: 'threejs',
+        meta: {
+            title: '3D',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/ThreeJs/index.vue')
+    },
+    {
+        path: '/sendMessage',
+        name: 'sendMessage',
+        meta: {
+            title: '组件传值',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/sendMessage/index.vue')
+    },
+    {
+        path: '/markdown',
+        name: 'markdown',
+        meta: {
+            title: '组件传值',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/markdown/index.vue')
+    },
+    {
+        path: '/print',
+        name: 'print',
+        meta: {
+            title: '打印',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/print/index.vue')
+    },
+    {
+        path: '/example',
+        name: 'example',
+        meta: {
+            title: '打印',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/example/index.vue')
     }
 ]
 const router = createRouter({
