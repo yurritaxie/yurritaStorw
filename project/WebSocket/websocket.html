@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>websocket</title>
+</head>
+<style>
+    #chat {
+        height: 500px;
+        overflow-y: auto;
+    }
+</style>
+
+<body>
+    <div id="chat">chat</div>
+    <input type="text" id="message" placeholder="请输入消息">
+    <button id="send">发送</button>
+</body>
+<script>
+    const socket = new WebSocket('ws://localhost:8080')
+    const chat = document.getElementById('chat')
+    const message = document.getElementById('message')
+    //当WebSocket连接建立成功后触发
+    socket.onopen = () => {
+        console.log('websocket已经建立连接');
+    }
+    //当WebSocket接收到服务器发送的消息时触发
+    socket.onmessage = event => {
+        // 获取消息内容
+        const data = JSON.parse(event.data);
+        const p = document.createElement('p');
+        p.innerText = `${data.username} : ${data.message}`
+        chat.appendChild(p);
+        chat.scrollTop = chat.scrollHeight;
+    }
+    // 事件监听发送按钮
+    send.addEventListener('click', () => {
+        const data = {
+            username: 'John',
+            message: message.value
+        };
+        socket.send(JSON.stringify(data));
+        message.value = '';
+    });
+</script>
+
+</html>
