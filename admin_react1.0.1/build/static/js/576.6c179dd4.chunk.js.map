@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/576.6c179dd4.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,qDAIP,C","sources":["pages/EnquiryForm/index.js"],"sourcesContent":["export default function EnquiryForm(){\r\n    return (\r\n        <div>\r\n            查询表格\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["EnquiryForm"],"sourceRoot":""}

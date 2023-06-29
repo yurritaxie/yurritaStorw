@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/788.ebe1c67f.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,2DAIP,C","sources":["pages/SeniorDetails/index.js"],"sourcesContent":["export default function SeniorDetails(){\r\n    return (\r\n        <div>\r\n            高级详情页\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["SeniorDetails"],"sourceRoot":""}

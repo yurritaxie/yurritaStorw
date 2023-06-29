@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/574.2079c789.chunk.js","mappings":"mLAAe,SAAUA,IACrB,OACI,wCAIP,C","sources":["pages/Abnormal403/index.js"],"sourcesContent":["export default function  Abnormal403(){\r\n    return (\r\n        <div>\r\n            Abnormal403\r\n        </div>\r\n    )\r\n}\r\n"],"names":["Abnormal403"],"sourceRoot":""}

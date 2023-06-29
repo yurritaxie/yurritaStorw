@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/668.ac645aed.chunk.js","mappings":"6IASA,UARA,WACI,OACI,0BACI,sDAGX,C","sources":["pages/Home/index.js"],"sourcesContent":["\r\nfunction Home(){\r\n    return (\r\n        <div>\r\n            <h1>我是首页</h1>\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default Home"],"names":[],"sourceRoot":""}

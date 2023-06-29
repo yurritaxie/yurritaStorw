@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/709.329c2532.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,yCAIP,C","sources":["pages/Project/index.js"],"sourcesContent":["export default function Project(){\r\n    return (\r\n        <div>\r\n            项目\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["Project"],"sourceRoot":""}

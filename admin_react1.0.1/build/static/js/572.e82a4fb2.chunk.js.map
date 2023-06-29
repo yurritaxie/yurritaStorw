@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/572.e82a4fb2.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,2CAIP,C","sources":["pages/PersonalCenter/index.js"],"sourcesContent":["export default function PersonalCenter(){\r\n    return (\r\n        <div>\r\n            PersonalCenter\r\n        </div>\r\n    )\r\n}\r\n"],"names":["PersonalCenter"],"sourceRoot":""}

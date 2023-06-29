@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadmin_react1_0_1=self.webpackChunkadmin_react1_0_1||[]).push([[605],{4605:function(n,e,a){a.r(e),a.d(e,{default:function(){return t}});var r=a(184);function t(){return(0,r.jsx)("div",{children:"FailPage"})}}}]);
+//# sourceMappingURL=605.f6a685ea.chunk.js.map

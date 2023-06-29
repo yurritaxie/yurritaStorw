@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/39.2ec3f008.chunk.js","mappings":"kLAAe,SAAUA,IACrB,OACI,wCAIP,C","sources":["pages/PersonalSet/index.js"],"sourcesContent":["export default function  PersonalSet(){\r\n    return (\r\n        <div>\r\n            PersonalSet\r\n        </div>\r\n    )\r\n}\r\n"],"names":["PersonalSet"],"sourceRoot":""}

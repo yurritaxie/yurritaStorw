@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/806.8950d86f.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,+CAIP,C","sources":["pages/WorkTable/index.js"],"sourcesContent":["export default function WorkTable(){\r\n    return (\r\n        <div>\r\n            工作台\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["WorkTable"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/86.512ef295.chunk.js","mappings":"0IAOA,UAPA,WACI,OACI,yCAIP,C","sources":["pages/Analyse/index.js"],"sourcesContent":["function Analyse(){\r\n    return (\r\n        <div>\r\n            分析\r\n        </div>\r\n    )\r\n}\r\nexport default Analyse"],"names":[],"sourceRoot":""}

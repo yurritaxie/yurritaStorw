@@ -1,0 +1,14 @@
+#layout{
+    height: 100%;
+    width: 100%;
+    .main{
+        width: 100%;
+        height: calc(100% - 48px);
+        display: flex;
+        .right{
+            height: 100%;
+            flex: 1;
+            background-color: chocolate;
+        }
+    }
+}

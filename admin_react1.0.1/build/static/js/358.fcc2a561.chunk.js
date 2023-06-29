@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadmin_react1_0_1=self.webpackChunkadmin_react1_0_1||[]).push([[358],{6358:function(n,e,r){r.r(e),r.d(e,{default:function(){return t}});var c=r(184);function t(){return(0,c.jsx)("div",{children:"BasicForm"})}}}]);
+//# sourceMappingURL=358.fcc2a561.chunk.js.map

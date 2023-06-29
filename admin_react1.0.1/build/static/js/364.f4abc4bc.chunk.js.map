@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/364.f4abc4bc.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,qDAIP,C","sources":["pages/StandardList/index.js"],"sourcesContent":["export default function StandardList(){\r\n    return (\r\n        <div>\r\n            标准列表\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["StandardList"],"sourceRoot":""}

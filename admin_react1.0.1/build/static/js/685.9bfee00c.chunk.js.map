@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/685.9bfee00c.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,qDAIP,C","sources":["pages/SeniorForm/index.js"],"sourcesContent":["export default function SeniorForm(){\r\n    return (\r\n        <div>\r\n            高级表单\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["SeniorForm"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/836.b8bf8fef.chunk.js","mappings":"mLAAe,SAASA,IACpB,OACI,qDAIP,C","sources":["pages/CardList/index.js"],"sourcesContent":["export default function CardList(){\r\n    return (\r\n        <div>\r\n            卡片列表\r\n        </div>\r\n    )\r\n}\r\n \r\n"],"names":["CardList"],"sourceRoot":""}

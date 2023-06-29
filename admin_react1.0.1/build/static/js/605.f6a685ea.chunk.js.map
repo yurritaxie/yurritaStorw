@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/605.f6a685ea.chunk.js","mappings":"mLAAe,SAAUA,IACrB,OACI,qCAIP,C","sources":["pages/FailPage/index.js"],"sourcesContent":["export default function  FailPage(){\r\n    return (\r\n        <div>\r\n            FailPage\r\n        </div>\r\n    )\r\n}\r\n"],"names":["FailPage"],"sourceRoot":""}
