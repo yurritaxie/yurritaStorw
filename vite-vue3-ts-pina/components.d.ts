@@ -10,17 +10,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElCalendar: typeof import('element-plus/es')['ElCalendar']
-    ElDialog: typeof import('element-plus/es')['ElDialog']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
-    ElRow: typeof import('element-plus/es')['ElRow']
-    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
-    ElUpload: typeof import('element-plus/es')['ElUpload']
+    ElForm: typeof import('element-plus/es')['ElForm']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    VptTable: typeof import('./src/components/vpt-table.vue')['default']
-    VtpHandMenu: typeof import('./src/components/vtp-hand-menu.vue')['default']
     VtpHeadMenu: typeof import('./src/components/vtp-head-menu.vue')['default']
     VtpTable: typeof import('./src/components/vtp-table.vue')['default']
   }
