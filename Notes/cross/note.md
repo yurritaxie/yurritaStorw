@@ -91,4 +91,4 @@ app.all('*',function(req, res, next){
 
 # 其他方法
 1. jsonp -->只支持get方法
-2. websocket -->ws协议，长链接协议
+2. websocket -->ws协议，长连接协议
