@@ -84,3 +84,7 @@ app.all('*',function(req, res, next){
    //前端服务
    npm run dev
 ```
+
+# 彻底解决跨域问题
+1. 使用前后合并的处理方式
+2. 前端打包后交给后端进行处理
