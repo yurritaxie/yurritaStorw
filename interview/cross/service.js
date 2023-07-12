@@ -13,10 +13,18 @@ app.all('*',function(req, res, next){
 
 
 //接口
+app.get("/api/user", (req,res)=>{
+    let result = {
+        name: "山里的闲人",
+        age: 4
+    }
+    // res.json(result)
+    res.send(result)
+})
 app.get("/user", (req,res)=>{
     let result = {
-        name: "my-name",
-        age: 4
+        name: "小猪猪怕水",
+        age: 5
     }
     res.json(result)
     //res.send(result)
