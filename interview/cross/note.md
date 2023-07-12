@@ -88,3 +88,7 @@ app.all('*',function(req, res, next){
 # 彻底解决跨域问题
 1. 使用前后合并的处理方式
 2. 前端打包后交给后端进行处理
+
+# 其他方法
+1. jsonp -->只支持get方法
+2. websocket -->ws协议，长链接协议
