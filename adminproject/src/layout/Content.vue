@@ -15,7 +15,7 @@
       >
         <!-- 使用keep-aclive保持组件的缓存功能 -->
         <!-- <keep-alive>
-          <component :is="Component" />
+          <component :is="Component"/>
         </keep-alive> -->
         <!-- 有些组件需要实时更新，可以通过条件判断，该组件是否保持缓存功能 原本keep-active带有两个属性include，exclude,但是我们使用的是setup语法糖，所以无法生效
         注意，使用keep-active,生命周期会有两个钩子函数  onActivated   deactivated

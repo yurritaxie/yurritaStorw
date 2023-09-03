@@ -36,16 +36,16 @@ const routes: Array<RouteRecordRaw> = [
     //     },
     //     component: () => import('@/pages/Home/index.vue')
     // },
-    // {
-    //     path: '/threejs',
-    //     name: 'threejs',
-    //     meta: {
-    //         title: '3D',
-    //         keepAlive: true,
-    //         requireAuth: true
-    //     },
-    //     component: () => import('@/pages/ThreeJs/index.vue')
-    // },
+    {
+        path: '/threejs',
+        name: 'threejs',
+        meta: {
+            title: '3D',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/ThreeJs/index.vue')
+    },
     // {
     //     path: '/sendMessage',
     //     name: 'sendMessage',
