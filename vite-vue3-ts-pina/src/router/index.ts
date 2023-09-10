@@ -18,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: '/login',
-        name: 'Login',
+        name: 'login',
         meta: {
             title: '登录',
             keepAlive: true,

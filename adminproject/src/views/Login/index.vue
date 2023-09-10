@@ -52,7 +52,7 @@
 <script setup>
 import { reactive, ref } from "vue";
 import { UserFilled, Unlock } from "@element-plus/icons-vue";
-import { LoginPost} from "../../http/api/login";
+import { LoginPost } from "../../http/api/login";
 //引入vuex
 import {useStore} from 'vuex'
 //引入路由

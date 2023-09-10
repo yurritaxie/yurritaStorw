@@ -5,7 +5,8 @@ import router from './router'
 import '@/style/common.css'
 import ElementPlus from 'element-plus'
 import print from 'vue3-print-nb'
-
+// 引入路由守卫
+import './router/defend';
 
 const app = createApp(App)
 app.use(store)
