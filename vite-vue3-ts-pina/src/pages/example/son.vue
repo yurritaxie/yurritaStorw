@@ -1,6 +1,6 @@
 <template>
     <div>
-        我是子组件
+        <p>附件</p>
     </div>
 </template>
 

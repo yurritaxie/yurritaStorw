@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .title {
+      background-color: orange;
+      width: 300px;
+    }
+  </style>
+  <body>
+    <!-- 准备一个‘容器’ -->
+    <div id="test"></div>
+    <!-- 引入react核心库 -->
+    <script
+      type="text/javascript"
+      src="../reactjs/react.development.js"
+    ></script>
+    <!-- 引入react-dom，用于支持React操作DOM -->
+    <script
+      type="text/javascript"
+      src="../reactjs/react-dom.development.js"
+    ></script>
+    <!-- 引入babel, 用于将jsx转化成js -->
+    <script type="text/javascript" src="../reactjs/babel.min.js"></script>
+    <script type="text/babel">
+        //1.创建函数式组件
+        function MyComponent(){
+            console.log(this);// undefined,因为babel编译后开启了严格模式
+            return <h2>我是用函数定义的组件(适用于【简单组件】的定义)</h2>; 
+        }
+        //2.渲染组件到页面
+        ReactDOM.render(<MyComponent/>,document.getElementById('test'))
+    </script>
+  </body>
+</html>

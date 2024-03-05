@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .title {
+      background-color: orange;
+      width: 300px;
+    }
+  </style>
+  <body>
+    <!-- 准备一个‘容器’ -->
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <div id="test3"></div>
+    <!-- 引入react核心库 -->
+    <script
+      type="text/javascript"
+      src="../reactjs/react.development.js"
+    ></script>
+    <!-- 引入react-dom，用于支持React操作DOM -->
+    <script
+      type="text/javascript"
+      src="../reactjs/react-dom.development.js"
+    ></script>
+    <!-- 引入babel, 用于将jsx转化成js -->
+    <script type="text/javascript" src="../reactjs/babel.min.js"></script>
+    <script type="text/babel">
+      //1.创建类式组件
+      class Person extends React.Component {
+        render() {
+          const { name, sex, age } = this.props;
+          return (
+            <ul>
+              <li>姓名：{name}</li>
+              <li>性别：{sex}</li>
+              <li>年龄：{age}</li>
+            </ul>
+          );
+        }
+      }
+      //2.渲染组件到页面
+      ReactDOM.render(
+        <Person name="Tom" sex="女" age="18" />,
+        document.getElementById("test1")
+      );
+      ReactDOM.render(
+        <Person name="Jerry" sex="男" age="12" />,
+        document.getElementById("test2")
+      );
+      //   ReactDOM.render(
+      //     <Person name="老刘" sex="女" age="40" />,
+      //     document.getElementById("test3")
+      //   );
+      const p = {
+        name: "老刘",
+        sex: "女",
+        age: 40,
+      };
+      ReactDOM.render(<Person {...p} />, document.getElementById("test3"));
+    </script>
+  </body>
+</html>

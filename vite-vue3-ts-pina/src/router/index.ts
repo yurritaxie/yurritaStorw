@@ -76,16 +76,16 @@ const routes: Array<RouteRecordRaw> = [
     //     },
     //     component: () => import('@/pages/print/index.vue')
     // },
-    // {
-    //     path: '/example',
-    //     name: 'example',
-    //     meta: {
-    //         title: '打印',
-    //         keepAlive: true,
-    //         requireAuth: true
-    //     },
-    //     component: () => import('@/pages/example/index.vue')
-    // }
+    {
+        path: '/example',
+        name: 'example',
+        meta: {
+            title: '打印',
+            keepAlive: true,
+            requireAuth: true
+        },
+        component: () => import('@/pages/example/index.vue')
+    }
 ]
 const router = createRouter({
     history: createWebHistory(),

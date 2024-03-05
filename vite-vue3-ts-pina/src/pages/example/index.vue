@@ -1,88 +1,53 @@
 <template>
-    <div>
-        <button @click="handleDelete">删除</button>
-        <son ref="myson"></son>
-        <el-upload
-            class="avatar-uploader"
-            :http-request="httpRequest"
-            action=""
-            :show-file-list="false"
-            :on-success="handleAvatarSuccess"
-            :before-upload="beforeAvatarUpload"
-            >
-            <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-            <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
-        </el-upload>
-        <el-calendar v-model="value" />
-    </div>
+  <el-upload v-model:file-list="fileList" class="upload-demo"
+    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" multiple :on-preview="handlePreview"
+    :on-remove="handleRemove" :before-remove="beforeRemove" :limit="3" :on-exceed="handleExceed">
+    <el-button type="primary">Click to upload</el-button>
+    <template #tip>
+      <div class="el-upload__tip">
+        jpg/png files with a size less than 500KB.
+      </div>
+    </template>
+  </el-upload>
 </template>
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { ElMessage, ElMessageBox } from 'element-plus'
 
-<script setup lang="ts">
-import { ref } from 'vue';
-import son from './son.vue';
-import { ElMessage } from 'element-plus'
-import { Plus } from '@element-plus/icons-vue'
-import type { UploadProps } from 'element-plus'
-const imageUrl = ref('')
-const value = ref(new Date())
-const httpRequest = (params : any) => {
-    console.log(params, 123);
-}
-const handleAvatarSuccess: UploadProps['onSuccess'] = (
-  response,
-  uploadFile
-) => {
-  imageUrl.value = URL.createObjectURL(uploadFile.raw!)
-}
+import type { UploadProps, UploadUserFile } from 'element-plus'
 
-const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
-  console.log(rawFile, 456);
-  if (rawFile.type !== 'image/jpeg') {
-    ElMessage.error('Avatar picture must be JPG format!')
-    return false
-  } else if (rawFile.size / 1024 / 1024 > 2) {
-    ElMessage.error('Avatar picture size can not exceed 2MB!')
-    return false
-  }
-  return true
-}
-const id = ref<string>()
-const myson = ref<any>(null);
-const handleDelete = () => {
-    //在父组件里面调用子组件里面的getPage方法，你就可以在子组件的getPage里面拿到id啦
-    myson.value.getPage(id)
+const fileList = ref<UploadUserFile[]>([
+  {
+    name: 'element-plus-logo.svg',
+    url: 'https://element-plus.org/images/element-plus-logo.svg',
+  },
+  {
+    name: 'element-plus-logo2.svg',
+    url: 'https://element-plus.org/images/element-plus-logo.svg',
+  },
+])
+
+const handleRemove: UploadProps['onRemove'] = (file, uploadFiles) => {
+  console.log(file, uploadFiles)
 }
 
+const handlePreview: UploadProps['onPreview'] = (uploadFile) => {
+  console.log(uploadFile)
+}
 
+const handleExceed: UploadProps['onExceed'] = (files, uploadFiles) => {
+  ElMessage.warning(
+    `The limit is 3, you selected ${files.length} files this time, add up to ${files.length + uploadFiles.length
+    } totally`
+  )
+}
+
+const beforeRemove: UploadProps['beforeRemove'] = (uploadFile, uploadFiles) => {
+  return ElMessageBox.confirm(
+    `Cancel the transfer of ${uploadFile.name} ?`
+  ).then(
+    () => true,
+    () => false
+  )
+}
 </script>
-
-<style scoped>
-.avatar-uploader .avatar {
-  width: 178px;
-  height: 178px;
-  display: block;
-}
-</style>
-
-<style>
-.avatar-uploader .el-upload {
-  border: 1px dashed var(--el-border-color);
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: var(--el-transition-duration-fast);
-}
-
-.avatar-uploader .el-upload:hover {
-  border-color: var(--el-color-primary);
-}
-
-.el-icon.avatar-uploader-icon {
-  font-size: 28px;
-  color: #8c939d;
-  width: 178px;
-  height: 178px;
-  text-align: center;
-}
-</style>
